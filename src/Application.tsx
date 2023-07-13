@@ -15,6 +15,8 @@ export const Application = (): JSX.Element => {
         </Link>
         <Link to="/about">About</Link>
       </nav>
+      
+      
       <Routes>
         <Route path="/about" element={about} />
         <Route path="/" element={home} />
