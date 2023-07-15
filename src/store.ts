@@ -10,7 +10,7 @@ const items = ["Позавтракать", "Сходить в магазин", "
 
 const DEFAULT_STATE = { items, done: {}, text: "" };
 
-// actions-----=-
+// actions-----=-11
 export const addItem = (text: string) => ({ type: "ADD_ITEM", text } as const);
 export const setText = (text: string) => ({ type: "SET_TEXT", text } as const);
 export const setDone = (index: number, done: boolean) =>
