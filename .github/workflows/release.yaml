@@ -21,12 +21,5 @@ jobs:
 
       - name: Release
         uses: cycjimmy/semantic-release-action@v3
-        with:
-          semantic_version: 18
-          extra_plugins: |
-            @semantic-release/changelog@6
-            @semantic-release/git@10
-            conventional-changelog-conventionalcommits@5.0.0
-            conventional-changelog-eslint@3.0.9
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
