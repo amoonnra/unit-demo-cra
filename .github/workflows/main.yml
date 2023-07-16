@@ -1,28 +1,28 @@
-name: CI - Changelog
+name: Release
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+      - develop
 
 jobs:
-  changelog_prerelease:
-    name: Update Changelog For Prerelease
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          ref: main
-      - name: Update Changelog
-        uses: heinrichreimer/github-changelog-generator-action@v2.1.1
-        with:
-          token: $
-          issues: true
-          issuesWoLabels: true
-          pullRequests: true
-          prWoLabels: true
-          unreleased: true
-          addSections: '{"documentation":{"prefix":" **Documentation:**","labels":["documentation"]}}'
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Changelog for PR
-          file_pattern: CHANGELOG.md
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: install
+        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec @semantic-release/git @semantic-release/release-notes-generator
+
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
