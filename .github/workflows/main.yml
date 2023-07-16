@@ -18,9 +18,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-
-      - name: Install
-        run: npm i auto-changelog
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Release
         uses: cycjimmy/semantic-release-action@v3
@@ -28,4 +26,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Changelog
-        run: npm run changelog
+        uses: BobAnkh/auto-generate-changelog@v1.2.5
+        with:
+          ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
+          PATH: 'CHANGELOG.md'
+          COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
+          TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
