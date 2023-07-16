@@ -29,13 +29,13 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "version": "auto-changelog -p -t keepachangelog --sort-commits subject",
         "lint": "npx eslint src/**/*.{js,jsx,ts,tsx}",
         "lint:fix": "npm run lint -- --fix",
         "eject": "react-scripts eject",
         "test": "react-scripts test",
         "e2e": "playwright test --project=chromium",
-        "test-ci": "CI=true npm test -- --reporters=\"default\" --reporters=\"jest-html-reporter\" --reporters=\"jest-teamcity\""
+        "test-ci": "CI=true npm test -- --reporters=\"default\" --reporters=\"jest-html-reporter\" --reporters=\"jest-teamcity\"",
+        "version": "auto-changelog -p -t keepachangelog --sort-commits subject && git add CHANGELOG.md"
     },
     "eslintConfig": {
         "extends": [

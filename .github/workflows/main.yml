@@ -19,6 +19,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
+      - 
+        name: Install
+        uses: npm i auto-changelog
+
       - name: Release
         uses: cycjimmy/semantic-release-action@v3
         env:
