@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/amoonnra/unit-demo-cra/compare/v0.1.1...v0.1.2) (2023-07-16)
+
+
+### Bug Fixes
+
+* sdsd ([a703740](https://github.com/amoonnra/unit-demo-cra/commit/a703740e7ecfffb673210a656e9d1129d15d056c))
+
 ### [0.1.1](https://github.com/amoonnra/unit-demo-cra/compare/v1.5.3...v0.1.1) (2023-07-16)
 
 
