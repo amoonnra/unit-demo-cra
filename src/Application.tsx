@@ -6,7 +6,7 @@ import { Home } from "./pages/Home";
 export const Application = (): JSX.Element => {
   const home = <Home />;
   const about = <About />;
-
+ 
   return (
     <div>
       <nav>
