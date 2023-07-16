@@ -21,7 +21,7 @@ export type Action =
   | ReturnType<typeof setText>
   | ReturnType<typeof setDone>;
 
-// reducer
+// reducertr
 const rootReducer = (
   state: ApplicationState = DEFAULT_STATE,
   action: Action
