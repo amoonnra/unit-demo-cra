@@ -1,20 +1,16 @@
 {
-  "branches": ["master"],
+  "branch": "master",
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+    "@semantic-release/github",
     [
-      "@semantic-release/changelog",
+      "semantic-release-slack-bot",
       {
-        "changelogFile": "docs/CHANGELOG.md"
+        "notifyOnSuccess": true,
+        "markdownReleaseNotes": true
       }
-    ],
-    [
-      "@semantic-release/gitlab",
-      {
-        "assets": [{"path": "docs/CHANGELOG.md"}]
-      }
-    ],
-    "@semantic-release/git"
+    ]
   ]
 }
