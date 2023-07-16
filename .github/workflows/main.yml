@@ -26,29 +26,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Changelog
-        uses: ardalanamini/auto-changelog@v4
-        id  : changelog
+        uses: BobAnkh/auto-generate-changelog@v1.2.5
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          commit-types: |
-            feat: New Features
-            fix: Bug Fixes
-            build: Build System & Dependencies
-            perf: Performance Improvements
-            docs: Documentation
-            test: Tests
-            refactor: Refactors
-            chore: Chores
-            ci: CI
-            style: Code Style
-            revert: Reverts
-          default-commit-type     : Other Changes
-          release-name            : v1.0.0
-          release-name-prefix     : ""
-          mention-authors         : true
-          mention-new-contributors: true
-          include-compare-link    : true
-          include-pr-links        : true
-          include-commit-links    : true
-          semver                  : true
-          use-github-autolink     : true
+          ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
+          PATH: 'CHANGELOG.md'
+          COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
+          TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
+
+      - name: Deploy React to GitHub Pages
+        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+        
