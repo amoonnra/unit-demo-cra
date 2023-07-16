@@ -19,8 +19,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - 
-        name: Install
+      - name: Install
         uses: npm i auto-changelog
 
       - name: Release
