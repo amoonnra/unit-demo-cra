@@ -28,4 +28,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Changelog
-        run: npm run release
+        run: npm run changelog
