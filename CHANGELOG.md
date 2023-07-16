@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## [v1.8.1](https://github.com/amoonnra/unit-demo-cra/releases/tag/v1.8.1) - 2023-07-16 18:43:17
+
 ## [v1.8.0](https://github.com/amoonnra/unit-demo-cra/releases/tag/v1.8.0) - 2023-07-16 18:34:06
 
 # [1.8.0](https://github.com/amoonnra/unit-demo-cra/compare/v1.7.6...v1.8.0) (2023-07-16)
