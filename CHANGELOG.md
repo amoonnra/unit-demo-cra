@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v1.8.0](https://github.com/amoonnra/unit-demo-cra/releases/tag/v1.8.0) - 2023-07-16 18:34:06
+
+# [1.8.0](https://github.com/amoonnra/unit-demo-cra/compare/v1.7.6...v1.8.0) (2023-07-16)
+
+
+### Features
+
+* changlog work now, but incorrect ([f2a26bb](https://github.com/amoonnra/unit-demo-cra/commit/f2a26bb3fcd36a1ec029b75f83ea6ae49066a990))
+
+### Feature
+
+- general:
+  - changlog work now, but incorrect ([f2a26bb](https://github.com/amoonnra/unit-demo-cra/commit/f2a26bb3fcd36a1ec029b75f83ea6ae49066a990))
+
 ## [v1.7.6](https://github.com/amoonnra/unit-demo-cra/releases/tag/v1.7.6) - 2023-07-16 18:27:31
 
 ## [v1.7.5](https://github.com/amoonnra/unit-demo-cra/releases/tag/v1.7.5) - 2023-07-16 18:19:08
