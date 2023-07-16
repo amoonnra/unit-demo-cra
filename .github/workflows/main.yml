@@ -23,3 +23,6 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Changelog
+        run: npm run version
