@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 
-import { About } from "./pages/About";
+import { About } from "./pages/Home";
 import { Home } from "./pages/Home";
 
 export const Application = (): JSX.Element => {
